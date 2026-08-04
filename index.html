@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Para Antonella ♡</title>
+<style>
+*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:Georgia,'Times New Roman',serif}
+body{min-height:100vh;overflow:hidden;background:
+radial-gradient(circle at 12% 18%,#fff8fb 0 3%,transparent 3.2%),
+linear-gradient(135deg,#ffd9e8,#fff0f6 48%,#ffd5e5);color:#5b3545}
+.bghearts{position:fixed;inset:0;pointer-events:none;opacity:.42;background-image:
+radial-gradient(circle,#ff91b6 2px,transparent 3px);background-size:44px 44px}
+.heart{position:fixed;color:#ef7fa6;opacity:.42;font-size:28px;animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-16px) rotate(8deg)}}
+.stage{position:relative;z-index:2;height:100svh;display:grid;place-items:center;padding:18px}
+.hint{position:absolute;bottom:30px;font-size:14px;letter-spacing:.06em;color:#9d5d75;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.45}}
+.envelope{width:min(330px,82vw);height:220px;position:relative;cursor:pointer;filter:drop-shadow(0 18px 25px #a85d7a35);transition:.5s}
+.env-body{position:absolute;inset:55px 0 0;background:#fff4f7;border:2px solid #e8a2bb;border-radius:8px}
+.env-body:before,.env-body:after{content:"";position:absolute;bottom:0;width:0;height:0;border-style:solid}
+.env-body:before{left:0;border-width:80px 0 0 164px;border-color:transparent transparent transparent #ffd5e3}
+.env-body:after{right:0;border-width:80px 164px 0 0;border-color:transparent #ffc8da transparent transparent}
+.flap{position:absolute;left:0;top:55px;width:0;height:0;border-left:165px solid transparent;border-right:165px solid transparent;border-top:110px solid #ffe4ed;transform-origin:top;transition:.8s;z-index:4}
+.envelope.open .flap{transform:rotateX(180deg);z-index:0}
+.seal{position:absolute;z-index:6;left:50%;top:125px;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:#d95c87;color:white;display:grid;place-items:center;font-size:31px;box-shadow:0 4px 10px #8b365557;transition:.45s}
+.envelope.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.2)}
+.paper{position:absolute;width:min(720px,91vw);max-height:78svh;min-height:390px;padding:34px 28px 72px;background:#fffdfb;border:1px solid #f1c5d4;border-radius:10px;box-shadow:0 22px 50px #9e58753d;opacity:0;transform:translateY(180px) scale(.7);pointer-events:none;transition:.8s;overflow:hidden}
+.paper.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.paper:before{content:"♡";position:absolute;right:22px;top:14px;color:#e990ae;font-size:34px}
+.pageText{font-size:clamp(18px,4.6vw,24px);line-height:1.65;font-style:italic;text-align:center;animation:fade .55s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.counter{position:absolute;left:24px;bottom:22px;font-size:13px;color:#b2748b}
+.next{position:absolute;right:22px;bottom:16px;border:0;border-radius:999px;padding:11px 18px;background:#ef9fba;color:white;font-weight:700;cursor:pointer}
+.gallery{position:absolute;inset:0;display:none;overflow:auto;padding:28px 16px 60px;background:linear-gradient(#ffe0eb,#fff6f9)}
+.gallery.show{display:block}
+.gallery h1{text-align:center;font-size:28px;margin:5px 0 8px}
+.gallery p{text-align:center;margin:0 0 24px;color:#9d5d75}
+.grid{max-width:850px;margin:auto;columns:2;column-gap:12px}
+.grid img{width:100%;display:block;margin:0 0 12px;border-radius:15px;box-shadow:0 8px 20px #8e52652b;break-inside:avoid;animation:pop .6s both}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(15px)}}
+@media(min-width:700px){.grid{columns:3}}
+</style></head>
+<body>
+<div class="bghearts"></div>
+<div class="heart" style="left:8%;top:12%">♡</div><div class="heart" style="right:9%;top:20%;animation-delay:-2s">♥</div>
+<div class="heart" style="left:14%;bottom:15%;animation-delay:-4s">♡</div><div class="heart" style="right:15%;bottom:12%">♡</div>
+<main class="stage" id="stage">
+  <div class="envelope" id="env" aria-label="Abrir sobre">
+    <div class="env-body"></div><div class="flap"></div><div class="seal">♥</div>
+  </div>
+  <div class="hint" id="hint">toca el sobre ♡</div>
+  <section class="paper" id="paper">
+    <div class="pageText" id="pageText"></div>
+    <span class="counter" id="counter"></span>
+    <button class="next" id="next">continuar ♡</button>
+  </section>
+  <section class="gallery" id="gallery">
+    <h1>Para vos, Nini ♡</h1>
+    <p>un pedacito de nosotros</p>
+    <div class="grid">
+      <img src="foto1.jpeg" alt="recuerdo 1" style="animation-delay:0.08s"><img src="foto2.gif" alt="recuerdo 2" style="animation-delay:0.16s"><img src="foto3.jpeg" alt="recuerdo 3" style="animation-delay:0.24s"><img src="foto4.jpeg" alt="recuerdo 4" style="animation-delay:0.32s"><img src="foto5.jpeg" alt="recuerdo 5" style="animation-delay:0.4s"><img src="foto6.jpeg" alt="recuerdo 6" style="animation-delay:0.48s"><img src="foto7.jpeg" alt="recuerdo 7" style="animation-delay:0.56s"><img src="foto8.jpeg" alt="recuerdo 8" style="animation-delay:0.64s"><img src="foto9.jpeg" alt="recuerdo 9" style="animation-delay:0.72s"><img src="foto10.jpeg" alt="recuerdo 10" style="animation-delay:0.8s">
+    </div>
+  </section>
+</main>
+<script>
+const chunks=["Hola amor, Antonella, Nini, como te guste, creé este texto antes de llegar al mes solo para decirte todo lo que siento por vos y lo mucho que te amo, ya llevamos un mes, aunque vos sabes que para mí llevamos más de un mes, llevamos varios, llevamos varios amándonos y queriéndonos, te amo mucho Antonella.", "Me haces sentir como nunca nadie me hizo sentir, me haces sentir feliz, me pones contento, me pone contento hablar con vos, sos todo lo que tengo y la única a la que necesito, perdón si algún día me equivoqué pero vos sabes que estar con vos es un sueño, intento cambiar para gustarte más y que no me termines laksks.", "Me gusta cómo me tratas, cómo me haces sentir, me gustan todas las cosas que haces, cómo me hablas, cómo me entiendes, te juro que sos perfecta, sabes que no tengo cosas interesantes para decirte pero sabes que siempre tengo ganas de hablar con vos, nunca me gustó estar solo y no lo estoy cuando te hablo.", "Me haces sentir acompañado y tu compañía es necesaria para mí, dependo de vos para ser feliz, te amo mucho Antonella, no puedo describir lo mucho que me gustas, lo mucho que te amo porque es indescriptible, nunca quisiera separarme de vos y menos empezando nuestra relación, me gusta estar con vos y te amo mucho.", "Espero yo pueda hacerte tan feliz como vos me haces a mí, estaré con vos hasta el día que te aburras de mí, lo prometo, sabes que te amo demasiado, me niego completamente a que sea una etapa lo nuestro, quiero durar la vida con vos, que sepas que te amo no es suficiente para describir el amor que te tengo.", "Me gusta cuando lloras, me gusta tu cara, me gusta tu boca, me gusta tu cuerpo, me gusta todo de vos Antonella, no te alejes nunca de mí, sos tan linda enojada, sos linda de todas maneras, yo bardeé toda mi vida y con vos soy más atento y cariñoso, doy todo de mí.", "Y aunque no sea tan detallista o cariñoso como vos, me gusta que me aceptes como tu novio, todos los días te pienso, tú me entiendes más de lo que yo me podría entender, me despido porque no puedo parar de elogiar la hermosa novia que me tocó tener.", "Espero estemos agarrados de la mano toda la vida y gracias por estar un mes conmigo, te amo."];
+let state=0, page=0;
+const env=document.getElementById('env'), hint=document.getElementById('hint'), paper=document.getElementById('paper');
+const txt=document.getElementById('pageText'), counter=document.getElementById('counter'), next=document.getElementById('next'), gallery=document.getElementById('gallery');
+
+env.addEventListener('click',()=>{
+  if(state===0){ env.classList.add('open'); hint.textContent='toca otra vez para sacar la carta ♡'; state=1; return; }
+  if(state===1){ env.style.opacity='0'; env.style.pointerEvents='none'; hint.style.display='none'; paper.classList.add('show'); showPage(); state=2; }
+});
+function showPage(){
+  txt.style.animation='none'; void txt.offsetWidth; txt.style.animation='';
+  txt.textContent=chunks[page]; counter.textContent=(page+1)+' / '+chunks.length;
+  next.textContent=page===chunks.length-1?'ver nuestros recuerdos ♡':'continuar ♡';
+}
+function advance(){
+  if(page<chunks.length-1){page++;showPage();}
+  else{paper.classList.remove('show'); setTimeout(()=>gallery.classList.add('show'),350);}
+}
+next.addEventListener('click',(e)=>{e.stopPropagation();advance()});
+paper.addEventListener('click',(e)=>{if(e.target!==next) advance()});
+</script></body></html>
