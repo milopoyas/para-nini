@@ -1,86 +1,126 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Para Antonella ♡</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff2f7">
+<title>Para Nini ♡</title>
 <style>
-*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:Georgia,'Times New Roman',serif}
-body{min-height:100vh;overflow:hidden;background:
-radial-gradient(circle at 12% 18%,#fff8fb 0 3%,transparent 3.2%),
-linear-gradient(135deg,#ffd9e8,#fff0f6 48%,#ffd5e5);color:#5b3545}
-.bghearts{position:fixed;inset:0;pointer-events:none;opacity:.42;background-image:
-radial-gradient(circle,#ff91b6 2px,transparent 3px);background-size:44px 44px}
-.heart{position:fixed;color:#ef7fa6;opacity:.42;font-size:28px;animation:float 7s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-16px) rotate(8deg)}}
-.stage{position:relative;z-index:2;height:100svh;display:grid;place-items:center;padding:18px}
-.hint{position:absolute;bottom:30px;font-size:14px;letter-spacing:.06em;color:#9d5d75;animation:pulse 1.6s infinite}
-@keyframes pulse{50%{opacity:.45}}
-.envelope{width:min(330px,82vw);height:220px;position:relative;cursor:pointer;filter:drop-shadow(0 18px 25px #a85d7a35);transition:.5s}
-.env-body{position:absolute;inset:55px 0 0;background:#fff4f7;border:2px solid #e8a2bb;border-radius:8px}
-.env-body:before,.env-body:after{content:"";position:absolute;bottom:0;width:0;height:0;border-style:solid}
-.env-body:before{left:0;border-width:80px 0 0 164px;border-color:transparent transparent transparent #ffd5e3}
-.env-body:after{right:0;border-width:80px 164px 0 0;border-color:transparent #ffc8da transparent transparent}
-.flap{position:absolute;left:0;top:55px;width:0;height:0;border-left:165px solid transparent;border-right:165px solid transparent;border-top:110px solid #ffe4ed;transform-origin:top;transition:.8s;z-index:4}
-.envelope.open .flap{transform:rotateX(180deg);z-index:0}
-.seal{position:absolute;z-index:6;left:50%;top:125px;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:#d95c87;color:white;display:grid;place-items:center;font-size:31px;box-shadow:0 4px 10px #8b365557;transition:.45s}
-.envelope.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.2)}
-.paper{position:absolute;width:min(720px,91vw);max-height:78svh;min-height:390px;padding:34px 28px 72px;background:#fffdfb;border:1px solid #f1c5d4;border-radius:10px;box-shadow:0 22px 50px #9e58753d;opacity:0;transform:translateY(180px) scale(.7);pointer-events:none;transition:.8s;overflow:hidden}
-.paper.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
-.paper:before{content:"♡";position:absolute;right:22px;top:14px;color:#e990ae;font-size:34px}
-.pageText{font-size:clamp(18px,4.6vw,24px);line-height:1.65;font-style:italic;text-align:center;animation:fade .55s ease}
-@keyframes fade{from{opacity:0;transform:translateY(10px)}}
-.counter{position:absolute;left:24px;bottom:22px;font-size:13px;color:#b2748b}
-.next{position:absolute;right:22px;bottom:16px;border:0;border-radius:999px;padding:11px 18px;background:#ef9fba;color:white;font-weight:700;cursor:pointer}
-.gallery{position:absolute;inset:0;display:none;overflow:auto;padding:28px 16px 60px;background:linear-gradient(#ffe0eb,#fff6f9)}
-.gallery.show{display:block}
-.gallery h1{text-align:center;font-size:28px;margin:5px 0 8px}
-.gallery p{text-align:center;margin:0 0 24px;color:#9d5d75}
-.grid{max-width:850px;margin:auto;columns:2;column-gap:12px}
-.grid img{width:100%;display:block;margin:0 0 12px;border-radius:15px;box-shadow:0 8px 20px #8e52652b;break-inside:avoid;animation:pop .6s both}
-@keyframes pop{from{opacity:0;transform:scale(.92) translateY(15px)}}
-@media(min-width:700px){.grid{columns:3}}
-</style></head>
+:root{--ink:#66384b;--pink:#ef8faf;--deep:#d95f8a;--paper:#fffdfb;--soft:#fff0f6}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:#fff2f7;color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+body{min-height:100svh;overflow:hidden}
+.sky{position:fixed;inset:0;background:
+ radial-gradient(circle at 15% 12%,#fff 0 2px,transparent 3px),
+ radial-gradient(circle at 75% 20%,#fff 0 2px,transparent 3px),
+ linear-gradient(145deg,#ffe2ec,#fff8fb 52%,#ffdce9);overflow:hidden}
+.float{position:absolute;color:#ed8eae;opacity:.34;animation:drift 7s ease-in-out infinite;user-select:none}
+@keyframes drift{50%{transform:translateY(-18px) rotate(8deg);opacity:.55}}
+.spark{position:absolute;width:5px;height:5px;border-radius:50%;background:#fff;box-shadow:0 0 12px #fff;animation:twinkle 2.4s infinite}
+@keyframes twinkle{50%{opacity:.25;transform:scale(.55)}}
+.app{position:relative;z-index:2;min-height:100svh;display:grid;place-items:center;padding:18px}
+.intro{text-align:center;transition:.8s}
+.to{font-style:italic;font-size:clamp(24px,7vw,36px);margin:0 0 20px;color:#a85774}
+.envelope{width:min(340px,84vw);height:230px;position:relative;cursor:pointer;filter:drop-shadow(0 22px 30px #8c47602f)}
+.envback{position:absolute;inset:58px 0 0;background:#fff8fa;border:1px solid #efb6ca;border-radius:8px}
+.pocket{position:absolute;left:0;right:0;bottom:0;height:174px;background:linear-gradient(145deg,#ffe2ec,#fff6f9);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);z-index:3;border-radius:0 0 8px 8px}
+.flap{position:absolute;left:0;top:58px;width:100%;height:118px;background:linear-gradient(#ffd9e7,#fff0f5);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;transition:transform .85s cubic-bezier(.2,.8,.2,1);z-index:5}
+.seal{position:absolute;z-index:8;left:50%;top:128px;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,#f589ad,#cc4e79);color:#fff;font-size:31px;box-shadow:0 7px 15px #9d3f6250;transition:.5s}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.1) rotate(25deg)}
+.tip{margin-top:22px;font-size:14px;letter-spacing:.08em;color:#a9667e;animation:pulse 1.7s infinite}
+@keyframes pulse{50%{opacity:.42}}
+.letter{position:absolute;width:min(720px,92vw);height:min(690px,79svh);background:var(--paper);border:1px solid #f0c8d5;border-radius:12px;box-shadow:0 24px 55px #8d49622f;opacity:0;pointer-events:none;transform:translateY(45svh) scale(.58);transition:.9s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.letter.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+.letter:before{content:"";position:absolute;inset:0;opacity:.35;background:
+ radial-gradient(circle at 10% 12%,#f6d4df 0 1px,transparent 1.5px);
+ background-size:25px 25px;pointer-events:none}
+.corner{position:absolute;font-size:32px;color:#e9a0b8;opacity:.75}.c1{top:14px;left:18px}.c2{right:18px;bottom:58px}
+.content{position:absolute;inset:52px 25px 86px;display:grid;place-items:center;text-align:center}
+.textcard{max-width:600px;font-style:italic;font-size:clamp(17px,4.3vw,23px);line-height:1.62;animation:enter .65s ease both}
+@keyframes enter{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.polaroid{background:#fff;padding:11px 11px 42px;box-shadow:0 14px 30px #76465a2b;transform:rotate(-2deg);max-width:min(390px,78vw);animation:photoIn .75s cubic-bezier(.2,.8,.2,1) both}
+.polaroid:nth-child(even){transform:rotate(2deg)}
+.polaroid img{display:block;width:100%;max-height:48svh;object-fit:cover;border-radius:2px}
+.polaroid .cap{position:absolute;left:0;right:0;bottom:11px;text-align:center;font-style:italic;font-size:19px;color:#9b5971}
+@keyframes photoIn{from{opacity:0;transform:translateY(30px) rotate(0) scale(.86)}}
+.tap{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:13px;letter-spacing:.08em;color:#ad6c84;animation:pulse 1.7s infinite}
+.player{position:fixed;z-index:20;left:50%;bottom:max(12px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(430px,92vw);padding:10px 13px;border:1px solid #ffffffa8;border-radius:22px;background:#ffffffb8;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 10px 30px #8b4c6425;display:none;align-items:center;gap:11px}
+.player.on{display:flex}
+.cover{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#ef8faf,#fff1f6);display:grid;place-items:center;font-size:24px;box-shadow:inset 0 0 0 1px #eab2c6}
+.meta{min-width:0;flex:1}.song{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.artist{font-size:12px;color:#9c687b;margin-top:2px}
+.bar{height:3px;background:#ead5dc;border-radius:9px;margin-top:7px;overflow:hidden}.progress{height:100%;width:0;background:#b76482}
+.play{border:0;background:#f2a1bb;color:white;width:38px;height:38px;border-radius:50%;font-size:16px}
+.final{animation:enter .9s both;text-align:center}
+.bigheart{font-size:74px;color:#df789c;animation:beat 1.5s infinite}
+@keyframes beat{50%{transform:scale(1.08)}}
+.final h1{font-size:clamp(30px,8vw,48px);font-style:italic;margin:8px 0}.final p{color:#a45f78}
+.memories{position:fixed;z-index:30;inset:0;display:none;overflow:auto;background:linear-gradient(#ffe2ed,#fff9fb);padding:34px 15px 80px}
+.memories.show{display:block}
+.memories h2{text-align:center;font-style:italic;font-size:32px;margin:0 0 6px}.memories>p{text-align:center;color:#a45f78;margin:0 0 24px}
+.grid{max-width:900px;margin:auto;columns:2;column-gap:12px}
+.grid figure{margin:0 0 12px;break-inside:avoid;background:#fff;padding:8px 8px 28px;box-shadow:0 8px 20px #77485b25;transform:rotate(var(--r));animation:enter .7s both}
+.grid img{width:100%;display:block}.grid figcaption{text-align:center;font-style:italic;padding-top:7px;color:#9d5f75}
+@media(min-width:700px){.grid{columns:3}.content{inset:55px 55px 88px}}
+</style>
+</head>
 <body>
-<div class="bghearts"></div>
-<div class="heart" style="left:8%;top:12%">♡</div><div class="heart" style="right:9%;top:20%;animation-delay:-2s">♥</div>
-<div class="heart" style="left:14%;bottom:15%;animation-delay:-4s">♡</div><div class="heart" style="right:15%;bottom:12%">♡</div>
-<main class="stage" id="stage">
-  <div class="envelope" id="env" aria-label="Abrir sobre">
-    <div class="env-body"></div><div class="flap"></div><div class="seal">♥</div>
+<div class="sky" id="sky"></div>
+<main class="app">
+<section class="intro" id="intro">
+  <h1 class="to">Para Nini ♡</h1>
+  <div class="envelope" id="env">
+    <div class="envback"></div><div class="flap"></div><div class="pocket"></div><div class="seal">♥</div>
   </div>
-  <div class="hint" id="hint">toca el sobre ♡</div>
-  <section class="paper" id="paper">
-    <div class="pageText" id="pageText"></div>
-    <span class="counter" id="counter"></span>
-    <button class="next" id="next">continuar ♡</button>
-  </section>
-  <section class="gallery" id="gallery">
-    <h1>Para vos, Nini ♡</h1>
-    <p>un pedacito de nosotros</p>
-    <div class="grid">
-      <img src="foto1.jpeg" alt="recuerdo 1" style="animation-delay:0.08s"><img src="foto2.gif" alt="recuerdo 2" style="animation-delay:0.16s"><img src="foto3.jpeg" alt="recuerdo 3" style="animation-delay:0.24s"><img src="foto4.jpeg" alt="recuerdo 4" style="animation-delay:0.32s"><img src="foto5.jpeg" alt="recuerdo 5" style="animation-delay:0.4s"><img src="foto6.jpeg" alt="recuerdo 6" style="animation-delay:0.48s"><img src="foto7.jpeg" alt="recuerdo 7" style="animation-delay:0.56s"><img src="foto8.jpeg" alt="recuerdo 8" style="animation-delay:0.64s"><img src="foto9.jpeg" alt="recuerdo 9" style="animation-delay:0.72s"><img src="foto10.jpeg" alt="recuerdo 10" style="animation-delay:0.8s">
-    </div>
-  </section>
+  <div class="tip" id="introTip">toca el corazón ♡</div>
+</section>
+<section class="letter" id="letter">
+  <span class="corner c1">♡</span><span class="corner c2">✧</span>
+  <div class="content" id="content"></div>
+  <div class="tap" id="tap">toca para continuar ♡</div>
+</section>
 </main>
-<script>
-const chunks=["Hola amor, Antonella, Nini, como te guste, creé este texto antes de llegar al mes solo para decirte todo lo que siento por vos y lo mucho que te amo, ya llevamos un mes, aunque vos sabes que para mí llevamos más de un mes, llevamos varios, llevamos varios amándonos y queriéndonos, te amo mucho Antonella.", "Me haces sentir como nunca nadie me hizo sentir, me haces sentir feliz, me pones contento, me pone contento hablar con vos, sos todo lo que tengo y la única a la que necesito, perdón si algún día me equivoqué pero vos sabes que estar con vos es un sueño, intento cambiar para gustarte más y que no me termines laksks.", "Me gusta cómo me tratas, cómo me haces sentir, me gustan todas las cosas que haces, cómo me hablas, cómo me entiendes, te juro que sos perfecta, sabes que no tengo cosas interesantes para decirte pero sabes que siempre tengo ganas de hablar con vos, nunca me gustó estar solo y no lo estoy cuando te hablo.", "Me haces sentir acompañado y tu compañía es necesaria para mí, dependo de vos para ser feliz, te amo mucho Antonella, no puedo describir lo mucho que me gustas, lo mucho que te amo porque es indescriptible, nunca quisiera separarme de vos y menos empezando nuestra relación, me gusta estar con vos y te amo mucho.", "Espero yo pueda hacerte tan feliz como vos me haces a mí, estaré con vos hasta el día que te aburras de mí, lo prometo, sabes que te amo demasiado, me niego completamente a que sea una etapa lo nuestro, quiero durar la vida con vos, que sepas que te amo no es suficiente para describir el amor que te tengo.", "Me gusta cuando lloras, me gusta tu cara, me gusta tu boca, me gusta tu cuerpo, me gusta todo de vos Antonella, no te alejes nunca de mí, sos tan linda enojada, sos linda de todas maneras, yo bardeé toda mi vida y con vos soy más atento y cariñoso, doy todo de mí.", "Y aunque no sea tan detallista o cariñoso como vos, me gusta que me aceptes como tu novio, todos los días te pienso, tú me entiendes más de lo que yo me podría entender, me despido porque no puedo parar de elogiar la hermosa novia que me tocó tener.", "Espero estemos agarrados de la mano toda la vida y gracias por estar un mes conmigo, te amo."];
-let state=0, page=0;
-const env=document.getElementById('env'), hint=document.getElementById('hint'), paper=document.getElementById('paper');
-const txt=document.getElementById('pageText'), counter=document.getElementById('counter'), next=document.getElementById('next'), gallery=document.getElementById('gallery');
 
-env.addEventListener('click',()=>{
-  if(state===0){ env.classList.add('open'); hint.textContent='toca otra vez para sacar la carta ♡'; state=1; return; }
-  if(state===1){ env.style.opacity='0'; env.style.pointerEvents='none'; hint.style.display='none'; paper.classList.add('show'); showPage(); state=2; }
+<div class="player" id="player">
+ <div class="cover">♡</div>
+ <div class="meta"><div class="song">You (feat. Travis Scott)</div><div class="artist">Don Toliver</div><div class="bar"><div class="progress" id="progress"></div></div></div>
+ <button class="play" id="play">Ⅱ</button>
+</div>
+
+<section class="memories" id="memories">
+ <h2>nuestros recuerdos ♡</h2><p>un pedacito de nosotros</p>
+ <div class="grid"><figure style="--r:-1.5deg"><img src="foto1.jpeg" alt="recuerdo"><figcaption>♡</figcaption></figure><figure style="--r:1.5deg"><img src="foto2.gif" alt="recuerdo"><figcaption>Nini ♡</figcaption></figure><figure style="--r:-1.5deg"><img src="foto3.jpeg" alt="recuerdo"><figcaption>mi niña ♡</figcaption></figure><figure style="--r:1.5deg"><img src="foto4.jpeg" alt="recuerdo"><figcaption>te amo ♡</figcaption></figure><figure style="--r:-1.5deg"><img src="foto5.jpeg" alt="recuerdo"><figcaption>vos ♡</figcaption></figure><figure style="--r:1.5deg"><img src="foto6.jpeg" alt="recuerdo"><figcaption>nosotros ♡</figcaption></figure><figure style="--r:-1.5deg"><img src="foto7.jpeg" alt="recuerdo"><figcaption>siempre ♡</figcaption></figure><figure style="--r:1.5deg"><img src="foto8.jpeg" alt="recuerdo"><figcaption>mi favorita ♡</figcaption></figure><figure style="--r:-1.5deg"><img src="foto9.jpeg" alt="recuerdo"><figcaption>♡</figcaption></figure><figure style="--r:1.5deg"><img src="foto10.jpeg" alt="recuerdo"><figcaption>un mes ♡</figcaption></figure></div>
+</section>
+<audio id="audio" src="you.mp3" preload="auto" loop></audio>
+<script>
+const steps=[{"type": "text", "text": "Hola amor, Antonella, Nini, como te guste, creé este texto antes de llegar al mes solo para decirte todo lo que siento por vos y lo mucho que te amo, ya llevamos un mes, aunque vos sabes que para mí llevamos más de un mes, llevamos varios, llevamos varios amándonos y queriéndonos, te amo mucho Antonella."}, {"type": "photo", "src": "foto1.jpeg", "caption": "mi niña ♡"}, {"type": "text", "text": "Me haces sentir como nunca nadie me hizo sentir, me haces sentir feliz, me pones contento, me pone contento hablar con vos, sos todo lo que tengo y la única a la que necesito, perdón si algún día me equivoqué pero vos sabes que estar con vos es un sueño, intento cambiar para gustarte más y que no me termines laksks."}, {"type": "photo", "src": "foto2.gif", "caption": "vos ♡"}, {"type": "text", "text": "Me gusta cómo me tratas, cómo me haces sentir, me gustan todas las cosas que haces, cómo me hablas, cómo me entiendes, te juro que sos perfecta, sabes que no tengo cosas interesantes para decirte pero sabes que siempre tengo ganas de hablar con vos, nunca me gustó estar solo y no lo estoy cuando te hablo."}, {"type": "photo", "src": "foto3.jpeg", "caption": "Nini ♡"}, {"type": "text", "text": "Me haces sentir acompañado y tu compañía es necesaria para mí, dependo de vos para ser feliz, te amo mucho Antonella, no puedo describir lo mucho que me gustas, lo mucho que te amo porque es indescriptible, nunca quisiera separarme de vos y menos empezando nuestra relación, me gusta estar con vos y te amo mucho."}, {"type": "photo", "src": "foto4.jpeg", "caption": "un pedacito de nosotros ♡"}, {"type": "text", "text": "Espero yo pueda hacerte tan feliz como vos me haces a mí, estaré con vos hasta el día que te aburras de mí, lo prometo, sabes que te amo demasiado, me niego completamente a que sea una etapa lo nuestro, quiero durar la vida con vos, que sepas que te amo no es suficiente para describir el amor que te tengo."}, {"type": "photo", "src": "foto5.jpeg", "caption": "te amo ♡"}, {"type": "text", "text": "Me gusta cuando lloras, me gusta tu cara, me gusta tu boca, me gusta tu cuerpo, me gusta todo de vos Antonella, no te alejes nunca de mí, sos tan linda enojada, sos linda de todas maneras, yo bardeé toda mi vida y con vos soy más atento y cariñoso, doy todo de mí."}, {"type": "photo", "src": "foto6.jpeg", "caption": "mi favorita ♡"}, {"type": "text", "text": "Y aunque no sea tan detallista o cariñoso como vos, me gusta que me aceptes como tu novio, todos los días te pienso, tú me entiendes más de lo que yo me podría entender, me despido porque no puedo parar de elogiar la hermosa novia que me tocó tener."}, {"type": "photo", "src": "foto7.jpeg", "caption": "siempre vos ♡"}, {"type": "text", "text": "Espero estemos agarrados de la mano toda la vida y gracias por estar un mes conmigo, te amo."}, {"type": "photo", "src": "foto8.jpeg", "caption": "♡"}, {"type": "final"}];
+const env=document.getElementById("env"), intro=document.getElementById("intro"), introTip=document.getElementById("introTip");
+const letter=document.getElementById("letter"), content=document.getElementById("content"), tap=document.getElementById("tap");
+const audio=document.getElementById("audio"), player=document.getElementById("player"), play=document.getElementById("play"), progress=document.getElementById("progress"), memories=document.getElementById("memories");
+let introState=0, step=0, playing=false;
+
+for(let i=0;i<24;i++){let e=document.createElement("span");e.className="float";e.textContent=i%3?"♡":"♥";e.style.left=(Math.random()*94)+"%";e.style.top=(Math.random()*94)+"%";e.style.fontSize=(14+Math.random()*22)+"px";e.style.animationDelay=(-Math.random()*7)+"s";document.getElementById("sky").appendChild(e)}
+for(let i=0;i<18;i++){let e=document.createElement("i");e.className="spark";e.style.left=(Math.random()*100)+"%";e.style.top=(Math.random()*100)+"%";e.style.animationDelay=(-Math.random()*2.4)+"s";document.getElementById("sky").appendChild(e)}
+
+async function startMusic(){
+ try{await audio.play();playing=true;play.textContent="Ⅱ";player.classList.add("on")}catch(e){player.classList.add("on");playing=false;play.textContent="▶"}
+}
+env.addEventListener("click", async ()=>{
+ if(introState===0){env.classList.add("open");introTip.textContent="toca otra vez para sacar la carta ♡";introState=1;await startMusic();return}
+ if(introState===1){intro.style.opacity="0";intro.style.pointerEvents="none";setTimeout(()=>letter.classList.add("show"),220);introTip.style.display="none";render();introState=2}
 });
-function showPage(){
-  txt.style.animation='none'; void txt.offsetWidth; txt.style.animation='';
-  txt.textContent=chunks[page]; counter.textContent=(page+1)+' / '+chunks.length;
-  next.textContent=page===chunks.length-1?'ver nuestros recuerdos ♡':'continuar ♡';
+function render(){
+ const s=steps[step]; content.innerHTML="";
+ if(s.type==="text"){let d=document.createElement("div");d.className="textcard";d.textContent=s.text;content.appendChild(d);tap.textContent="toca para continuar ♡"}
+ if(s.type==="photo"){let d=document.createElement("div");d.className="polaroid";d.innerHTML=`<img src="${s.src}" alt=""><div class="cap">${s.caption}</div>`;content.appendChild(d);tap.textContent="toca para seguir leyendo ♡"}
+ if(s.type==="final"){content.innerHTML='<div class="final"><div class="bigheart">♥</div><h1>Feliz primer mes, Nini ♡</h1><p>gracias por estar conmigo</p></div>';tap.textContent="toca para ver nuestros recuerdos ♡"}
 }
-function advance(){
-  if(page<chunks.length-1){page++;showPage();}
-  else{paper.classList.remove('show'); setTimeout(()=>gallery.classList.add('show'),350);}
+function next(){
+ if(step<steps.length-1){step++;render()}
+ else{letter.classList.remove("show");setTimeout(()=>memories.classList.add("show"),450)}
 }
-next.addEventListener('click',(e)=>{e.stopPropagation();advance()});
-paper.addEventListener('click',(e)=>{if(e.target!==next) advance()});
-</script></body></html>
+letter.addEventListener("click",next);
+play.addEventListener("click",async e=>{e.stopPropagation();if(audio.paused){await audio.play();playing=true;play.textContent="Ⅱ"}else{audio.pause();playing=false;play.textContent="▶"}});
+audio.addEventListener("timeupdate",()=>{if(audio.duration)progress.style.width=((audio.currentTime/audio.duration)*100)+"%"});
+</script>
+</body></html>
